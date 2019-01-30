@@ -1,0 +1,384 @@
+<%
+  var thisPage = 'dashboard';
+
+  let resourceData = data.resourceData;
+  let userData = data.userData;
+  let projectionData = data.projectionData;
+
+  const name = userData.name;
+  const names = name.split(' ');
+  const firstName = names[0];
+  const lastName = names[names.length-1];
+
+  const available_for_hiring = userData.available_for_hiring;
+  const hiringMarkup = available_for_hiring ? "checked" : "";
+
+  const avatar_href = "/images/uploads/avatars/" + userData.avatar;
+
+  const email = userData.email;
+
+  const birthday = moment(userData.birthday).format('YYYY-MM-DD');
+
+  const title = userData.title;
+  const company = userData.company;
+  const tag_line = userData.tag_line;
+
+  const resources = userData.resourcesAverages[0];
+
+  const lifeScore = parseInt(userData.lifeScore[0].value);
+
+  const lifeAverage = parseInt(userData.lifeAverage[0].value);
+
+  let resourcesAttributes = {
+    "money":{
+      "backgroundColor":"#547f2e"
+    },
+    "time":{
+      "backgroundColor":"#ffc100"
+    },
+    "knowledge":{
+      "backgroundColor":"#a65a80"
+    },
+    "emotion":{
+      "backgroundColor":"#ff2f28"
+    },
+    "health":{
+      "backgroundColor":"#4e96d3"
+    },
+  };
+
+%>
+
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><!-- End Required meta tags -->
+    <!-- Begin SEO tag -->
+    <title> Dashboard | Zen Economics - Ferramenta da Vida </title>
+    <meta property="og:title" content="Dashboard">
+    <meta name="author" content="Beni Arisandi">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="Responsive admin theme build on top of Bootstrap 4">
+    <meta property="og:description" content="Responsive admin theme build on top of Bootstrap 4">
+    <link rel="canonical" href="http://uselooper.com">
+    <meta property="og:url" content="http://uselooper.com">
+    <meta property="og:site_name" content="Looper - Bootstrap 4 Admin Theme">
+    <script type="application/ld+json">
+      {
+        "name": "Looper - Bootstrap 4 Admin Theme",
+        "description": "Responsive admin theme build on top of Bootstrap 4",
+        "author":
+        {
+          "@type": "Person",
+          "name": "Beni Arisandi"
+        },
+        "@type": "WebSite",
+        "url": "",
+        "headline": "Dashboard",
+        "@context": "http://schema.org"
+      }
+    </script><!-- End SEO tag -->
+    <!-- FAVICONS -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon.png">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <meta name="theme-color" content="#3063A0"><!-- End FAVICONS -->
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600" rel="stylesheet"><!-- End GOOGLE FONT -->
+    <!-- BEGIN PLUGINS STYLES -->
+    <link rel="stylesheet" href="vendor/open-iconic/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.css">
+    <link rel="stylesheet" href="vendor/flatpickr/flatpickr.min.css"><!-- END PLUGINS STYLES -->
+    <!-- BEGIN THEME STYLES -->
+    <link rel="stylesheet" href="stylesheets/theme.min.css" data-skin="default">
+    <link rel="stylesheet" href="stylesheets/theme-dark.min.css" data-skin="dark">
+    <link rel="stylesheet" href="stylesheets/custom.css"><!-- Disable unused skin immediately -->
+    <script> var skin = localStorage.getItem('skin') || 'default';
+    var unusedLink = document.querySelector('link[data-skin]:not([data-skin="'+ skin +'"])');
+
+    unusedLink.setAttribute('rel', '');
+    unusedLink.setAttribute('disabled', true);
+    </script><!-- END THEME STYLES -->
+  </head>
+  <body>
+    <!-- .app -->
+    <div class="app">
+      <!--[if lt IE 10]>
+      <div class="page-message" role="alert">Você está usando um navegador <strong>desatualizado</strong>. Por favor <a class="alert-link" href="http://browsehappy.com/">atualize seu navegador</a> para melhorar a sua experiência e segurança.</div>
+      <![endif]-->
+
+      <!-- .app-header -->
+      <%- include('components/app-header.ejs', {avatar_href:avatar_href}); %>
+      <!-- /.app-header -->
+
+      <!-- .app-aside -->
+      <aside class="app-aside app-aside-expand-md app-aside-light">
+        <!-- .aside-content -->
+        <div class="aside-content">
+          <!-- .aside-header -->
+          <header class="aside-header d-block d-md-none">
+            <!-- .btn-account -->
+            <button class="btn-account" type="button" data-toggle="collapse" data-target="#dropdown-aside"><span class="user-avatar user-avatar-lg"><img src="<%avatar_href%>" alt=""></span> <span class="account-icon"><span class="fa fa-caret-down fa-lg"></span></span> <span class="account-summary"><span class="account-name">Carlos Ferraz</span> <span class="account-description">Gerente de Projetos de TI</span></span></button> <!-- /.btn-account -->
+            <!-- .dropdown-aside -->
+            <div id="dropdown-aside" class="dropdown-aside collapse">
+              <!-- dropdown-items -->
+              <div class="pb-3">
+                <a class="dropdown-item" href="user-profile.html"><span class="dropdown-icon oi oi-person"></span> Perfil</a> <a class="dropdown-item" href="auth-signin-v1.html"><span class="dropdown-icon oi oi-account-logout"></span> Logout</a>
+                <div class="dropdown-divider"></div><a class="dropdown-item" href="#!">Central de Ajuda</a> <a class="dropdown-item" href="#!">Fórum de Perguntas</a> <a class="dropdown-item" href="#!">Atalhos de Teclado</a>
+              </div><!-- /dropdown-items -->
+            </div><!-- /.dropdown-aside -->
+          </header><!-- /.aside-header -->
+
+          <!-- .aside-menu -->
+          <%- include('components/aside-menu.ejs',{thisPage:thisPage}); %>
+          <!-- /.aside-menu -->
+
+          <!-- Skin changer -->
+          <div class="aside-footer border-top p-3">
+            <button class="btn btn-light btn-block" data-toggle="skin">Modo noturno <i class="fas fa-moon ml-1"></i></button>
+          </div><!-- /Skin changer -->
+        </div><!-- /.aside-content -->
+      </aside><!-- /.app-aside -->
+      <!-- .app-main -->
+      <main class="app-main">
+        <!-- .wrapper -->
+        <div class="wrapper">
+          <!-- .page -->
+          <div class="page">
+            <!-- .page-inner -->
+            <div class="page-inner">
+              <!-- .page-title-bar -->
+              <header class="page-title-bar">
+                <p class="lead">
+                  <span class="font-weight-bold">Olá Carlos!</span> <span class="d-block text-muted">Isto é o que está acontecendo com a sua vida hoje.</span>
+                </p>
+              </header><!-- /.page-title-bar -->
+              <!-- .page-section -->
+              <div class="page-section">
+                <!-- .section-block -->
+                <div class="section-block">
+                  <!-- metric row -->
+                  <div class="row">
+                    <!-- metric column -->
+                    <div class="col">
+                      <!-- .metric -->
+                      <a href="#" class="metric metric-bordered align-items-center">
+                        <h2 class="metric-label"> dinheiro </h2>
+                        <p class="metric-value h3">
+                        <sub><i class="oi oi-dollar"></i></sub> <span class="value resourceValue" resource="money"><%=resources.money%></span>
+                        </p>
+                      </a> <!-- /.metric -->
+                    </div><!-- /metric column -->
+
+                    <!-- metric column -->
+                    <div class="col">
+                      <!-- .metric -->
+                      <a href="#" class="metric metric-bordered align-items-center">
+                        <h2 class="metric-label"> saúde </h2>
+                        <p class="metric-value h3">
+                          <sub><i class="oi oi-medical-cross"></i></sub> <span class="value resourceValue" resource="health"><%=resources.health%></span>
+                        </p>
+                      </a> <!-- /.metric -->
+                    </div><!-- /metric column -->
+
+                    <!-- metric column -->
+                    <div class="col">
+                      <!-- .metric -->
+                      <a href="#" class="metric metric-bordered align-items-center">
+                        <h2 class="metric-label"> conhecimento </h2>
+                        <p class="metric-value h3">
+                          <sub><i class="oi oi-book"></i></sub> <span class="value resourceValue" resource="knowledge"><%=resources.knowledge%></span>
+                        </p>
+                      </a> <!-- /.metric -->
+                    </div><!-- /metric column -->
+
+                    <!-- metric column -->
+                    <div class="col">
+                      <!-- .metric -->
+                      <a href="#" class="metric metric-bordered align-items-center">
+                        <h2 class="metric-label"> tempo </h2>
+                        <p class="metric-value h3">
+                          <sub><i class="oi oi-clock"></i></sub> <span class="value resourceValue" resource="time"><%=resources.time%></span>
+                        </p>
+                      </a> <!-- /.metric -->
+                    </div><!-- /metric column -->
+
+                    <!-- metric column -->
+                    <div class="col">
+                      <!-- .metric -->
+                      <a href="#" class="metric metric-bordered align-items-center">
+                        <h2 class="metric-label"> emoção </h2>
+                        <p class="metric-value h3">
+                          <sub><i class="oi oi-heart"></i></sub> <span class="value resourceValue" resource="emotion"><%=resources.emotion%></span>
+                        </p>
+                      </a> <!-- /.metric -->
+                    </div><!-- /metric column -->
+
+                    <div class="col">
+                      <!-- .metric -->
+                      <a href="#" class="metric metric-bordered">
+                        <div class="metric-badge">
+                          <span class="badge badge-lg badge-success"><span class="oi oi-media-record pulse mr-1"></span> NOTA DA VIDA</span>
+                        </div>
+                        <p class="metric-value h3">
+                          <sub><i class="oi oi-timer"></i></sub> <span class="value"><%=lifeScore%></span>
+                        </p>
+                      </a> <!-- /.metric -->
+                    </div><!-- /metric column -->
+
+                    <div class="col">
+                      <!-- .metric -->
+                      <a href="#" class="metric metric-bordered">
+                        <div class="metric-badge">
+                          <span class="badge badge-lg badge-success"><span class="oi oi-media-record pulse mr-1"></span> MÉDIA DA VIDA</span>
+                        </div>
+                        <p class="metric-value h3">
+                          <sub><i class="oi oi-timer"></i></sub> <span class="value"><%=lifeAverage%></span>
+                        </p>
+                      </a> <!-- /.metric -->
+                    </div><!-- /metric column -->
+
+                  </div><!-- /metric row -->
+                </div><!-- /.section-block -->
+
+                <!-- grid container -->
+                <!-- grid row -->
+                <div class="row">
+
+                  <!-- grid column -->
+                  <div class="col-12">
+                    <!-- .card -->
+                    <section class="card card-fluid">
+                      <!-- .card-body -->
+                      <div class="card-body">
+                        <!-- .d-flex -->
+                        <div class="d-flex align-items-center mb-4">
+                          <h3 class="card-title mb-0"> Evolução </h3><!-- .card-title-control -->
+                        </div>
+                        <!-- /.d-flex -->
+                        <div class="chartjs" style="height: 291px">
+                          <canvas id="evolution-chart-canvas"></canvas>
+                        </div>
+                      </div><!-- /.card-body -->
+                    </section><!-- /.card -->
+                  </div><!-- /grid column -->
+
+                  <!-- grid column -->
+                  <div class="col-12">
+                    <!-- .card -->
+                    <section class="card card-fluid">
+                      <!-- .card-body -->
+                      <div class="card-body">
+                        <!-- .d-flex -->
+                        <div class="d-flex align-items-center mb-4">
+                          <h3 class="card-title mb-0"> Projeção da Nota da Vida em 20 anos: <span id="lifeScoreProjection"></span> </h3><!-- .card-title-control -->
+                        </div>
+                        <!-- /.d-flex -->
+                        <div class="chartjs" style="height: 291px">
+                          <canvas id="projection-chart-canvas"></canvas>
+                        </div>
+                      </div><!-- /.card-body -->
+                    </section><!-- /.card -->
+                  </div><!-- /grid column -->
+
+                  <!-- grid column -->
+                  <div class="col-12">
+                    <!-- .card -->
+                    <section class="card card-fluid">
+                      <!-- .card-body -->
+                      <div class="card-body">
+                        <!-- .d-flex -->
+                        <div class="d-flex align-items-center mb-4">
+                          <h3 class="card-title mb-0"> Últimos resultados: <span id="lifeScoreProjection"></span> </h3><!-- .card-title-control -->
+                        </div>
+                        <!-- /.d-flex -->
+                        <div class="chartjs" style="height: 291px">
+                          <canvas id="summary-chart-canvas"></canvas>
+                        </div>
+                      </div><!-- /.card-body -->
+                    </section><!-- /.card -->
+                  </div><!-- /grid column -->
+
+                </div><!-- /grid row -->
+
+                <!-- section-deck -->
+                <div class="section-deck">
+
+                    <!-- .card -->
+                  <div class="card card-fluid">
+                    <header class="card-header"> O que evitar </header><!-- .card-body -->
+                    <div class="card-body">
+                      <!-- .todo-list -->
+                      <div class="todo-list" action="o_que_evitar">
+
+                        <!-- .todo-header -->
+                        <div class="todo-header"> sem ações definidas! </div><!-- /.todo-header -->
+
+                      </div><!-- /.todo-list-->
+                    </div><!-- /.card-body -->
+                    <!-- .card-footer -->
+                    <footer class="card-footer">
+                      <!--<a href="#!" class="card-footer-item">Ver todos <i class="fa fa-fw fa-angle-right"></i></a>-->
+                    </footer><!-- /.card-footer -->
+                  </div><!-- /.card -->
+
+                  <!-- .card -->
+                  <div class="card card-fluid">
+                    <header class="card-header"> O que fazer </header><!-- .card-body -->
+                    <div class="card-body">
+                      <!-- .todo-list -->
+                      <div class="todo-list" action="o_que_fazer">
+
+                        <!-- .todo-header -->
+                        <div class="todo-header"> Sem ações definidas! </div><!-- /.todo-header -->
+
+                      </div><!-- /.todo-list -->
+                    </div><!-- /.card-body -->
+                    <!-- .card-footer -->
+                    <footer class="card-footer">
+                      <!--<a href="#!" class="card-footer-item">Ver todos <i class="fa fa-fw fa-angle-right"></i></a>-->
+                    </footer><!-- /.card-footer -->
+                  </div><!-- /.card -->
+                </div><!-- /section-deck -->
+              </div><!-- /.page-section -->
+            </div><!-- /.page-inner -->
+          </div><!-- /.page -->
+        </div><!-- .app-footer -->
+        <footer class="app-footer">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a class="text-muted" href="#!">Suporte</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="text-muted" href="#!">Central de Ajuda</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="text-muted" href="#!">Privacidade</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="text-muted" href="#!">Termos de Serviço</a>
+            </li>
+          </ul>
+          <div class="copyright"> Copyright ZenEconomics © 2018. Todos os direitos reservados. </div>
+        </footer><!-- /.app-footer -->
+        <!-- /.wrapper -->
+      </main><!-- /.app-main -->
+    </div><!-- /.app -->
+    <!-- BEGIN BASE JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script> <!-- END BASE JS -->
+    <!-- BEGIN PLUGINS JS -->
+    <script src="vendor/pace/pace.min.js"></script>
+    <script src="vendor/stacked-menu/stacked-menu.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="vendor/flatpickr/flatpickr.min.js"></script>
+    <script src="vendor/easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="vendor/chart.js/Chart.min.js"></script> <!-- END PLUGINS JS -->
+    <!-- BEGIN THEME JS -->
+    <script src="javascript/theme.min.js"></script> <!-- END THEME JS -->
+    <!-- BEGIN PAGE LEVEL JS -->
+    <script type="module" src="javascript/pages/dashboard.js"></script> <!-- END PAGE LEVEL JS -->
+  </body>
+</html>

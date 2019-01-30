@@ -1,0 +1,42 @@
+body {
+  font-size: .875rem;
+}
+
+.toavoid{
+  background-color:red;
+  color:white;
+}
+
+.what-to-avoid{
+	background: red;
+  font-weight: bolder;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.todo{
+  background-color:green;
+  color:white;
+}
+
+.what-to-do{
+	background: green;
+  font-weight: bolder;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.questionaire{
+  background: #6d6d6d;
+  color: white;
+  font-weight: bolder;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.questionaire-item{
+  background-color:#6ae86a;
+  color:green;
+}

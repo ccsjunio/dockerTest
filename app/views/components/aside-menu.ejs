@@ -1,0 +1,112 @@
+<section class="aside-menu overflow-hidden">
+    <!-- .stacked-menu -->
+    <nav id="stacked-menu" class="stacked-menu">
+      <!-- .menu -->
+      <ul class="menu">
+
+        <!-- .menu-item -->
+        <li class="menu-item <%if(thisPage==='dashboard'){%>has-active<%}%>">
+          <a href="/dashboard" class="menu-link">
+            <span class="menu-icon fa fa-home"></span>
+            <span class="menu-text">Home</span>
+          </a>
+        </li>
+        <!-- /.menu-item -->
+
+        <!-- .menu-item -->
+        <li class="menu-item <%if(thisPage==='simulator'||thisPage==='projection'||thisPage==='evolution'){%>has-active<%}%> has-child">
+          <a href="#" class="menu-link">
+          <span class="menu-icon fa fa-toolbox"></span>
+           <span class="menu-text">Ferramentas</span>
+           <span class="badge badge-warning"></span></a> <!-- child menu -->
+          <ul class="menu">
+
+            <li class="menu-item <%if(thisPage==='simulator'){%>has-active<%}%>">
+              <a href="/tools/simulator" class="menu-link">Simulador</a>
+            </li>
+            <li class="menu-item <%if(thisPage==='projection'){%>has-active<%}%>">
+              <a href="/tools/projection" class="menu-link">Projeção</a>
+            </li>
+            <li class="menu-item <%if(thisPage==='evolution'){%>has-active<%}%>">
+              <a href="/tools/evolution" class="menu-link">Evolução</a>
+            </li>
+            <!--
+            <li class="menu-item">
+              <a href="#" class="menu-link">Mensagens</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">Conversas</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">Agenda</a>
+            </li>
+            -->
+          </ul><!-- /child menu -->
+        </li><!-- /.menu-item -->
+
+        <!-- .menu-item -->
+        <li class="menu-item <%if(thisPage.indexOf('questionaire')!=-1){%>has-active<%}%> has-child">
+          <a href="#" class="menu-link"><span class="menu-icon far fa-question-circle"></span>
+            <span class="menu-text">Questionário</span>
+            <span class="badge badge-warning"></span>
+          </a> <!-- child menu -->
+          <ul class="menu">
+
+            <li class="menu-item <%if(thisPage==='questionaire/money'){%>has-active<%}%>">
+              <a href="/questionaire/money" class="menu-link">Dinheiro</a>
+            </li>
+            <li class="menu-item <%if(thisPage==='questionaire/health'){%>has-active<%}%>">
+              <a href="/questionaire/health" class="menu-link">Saúde</a>
+            </li>
+            <li class="menu-item <%if(thisPage==='questionaire/knowledge'){%>has-active<%}%>">
+              <a href="/questionaire/knowledge" class="menu-link">Conhecimento</a>
+            </li>
+            <li class="menu-item <%if(thisPage==='questionaire/time'){%>has-active<%}%>">
+              <a href="/questionaire/time" class="menu-link">Tempo</a>
+            </li>
+            <li class="menu-item <%if(thisPage==='questionaire/emotion'){%>has-active<%}%>">
+              <a href="/questionaire/emotion" class="menu-link">Emoção</a>
+            </li>
+
+          </ul><!-- /child menu -->
+        </li><!-- /.menu-item -->
+
+        <!-- .menu-item -->
+        <li class="menu-item <%if(thisPage==='results'){%>has-active<%}%>">
+          <a href="#" class="menu-link">
+            <span class="menu-icon fa fa-vials"></span>
+            <span class="menu-text">Resultados</span>
+          </a>
+        </li>
+        <!-- /.menu-item -->
+
+        <!-- .menu-item -->
+        <li class="menu-item <%if(thisPage==='results'){%>has-active<%}%>">
+          <a href="#s" class="menu-link">
+            <span class="menu-icon fa fa-bullseye"></span>
+            <span class="menu-text">Conteúdo Indicado</span>
+          </a>
+        </li>
+        <!-- /.menu-item -->
+
+        <!-- .menu-item -->
+        <li class="menu-item <%if(thisPage==='user-profile' || thisPage==='user-profile-settings'){%>has-active<%}%> has-child">
+          <a href="#" class="menu-link"><span class="menu-icon far fa-user"></span>
+            <span class="menu-text">Usuário</span>
+            <span class="badge badge-warning"></span>
+          </a> <!-- child menu -->
+          <ul class="menu">
+
+            <li class="menu-item <%if(thisPage==='user-profile'){%>has-active<%}%>">
+              <a href="/user-profile" class="menu-link">Perfil</a>
+            </li>
+            <li class="menu-item <%if(thisPage==='user-profile-settings'){%>has-active<%}%>">
+              <a href="/user-profile-settings" class="menu-link">Configurações</a>
+            </li>
+
+          </ul><!-- /child menu -->
+        </li><!-- /.menu-item -->
+
+      </ul><!-- /.menu -->
+    </nav><!-- /.stacked-menu -->
+  </section>

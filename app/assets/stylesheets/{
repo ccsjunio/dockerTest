@@ -1,0 +1,1363 @@
+{
+		creation:new Date(),
+		active:false,
+		user: '',
+		resources:[
+			{
+				order:1,
+				name:"dinheiro",
+				color:"4eb5a4",
+				logo:"logo_dinheiro.png",
+				subresources:[
+					{
+						name:"organização",
+						order:1,
+						o_que_evitar:[
+							{option:"manter meu controle financeiro na memória",selected:false},
+							{option:"terceirizar tarefas que você mesmo pode realizar",selected:false},
+							{option:"se for casal, cuidar do planejamento financeiro sozinho",selected:false},
+							{option:"definir sonhos e objetivos financeiros não realistas",selected:false},
+							{option:"buscar atalhos financeiros",selected:false},
+							{option:"ter um plano de celular, televisão ou internet que não combina com meu orçamento",selected:false},
+							{option:"comprar sem planejamento prévio, apenas por estar em promoção",selected:false},
+							{option:"manter benefícios que não são usados",selected:false},
+							{option:"usar o cheque especial como renda extra",selected:false},
+						],
+						o_que_fazer:[
+							{option:"definir um percentual de gasto em cima do que ganha",selected:false},
+							{option:"criar uma reserva financeira (fundo de emergência)",selected:false},
+							{option:"sobrar dinheiro no final do mês",selected:false},
+							{option:"ter um bom controle financeiro de gastos e receitas",selected:false},
+							{option:"adote um estilo de vida que corresponda a mais ou menos 35% da minha renda",selected:false},
+							{option:"comprar só o necessário",selected:false},
+							{option:"saber dizer não",selected:false},
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "que nota você dá para o seu controle de despesas e receitas?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "que nota você dá para a evolução do seu controle de despesas e receitas?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "você faz orçamento de receitas e despesas?",
+								answers: [
+									{answer:"nunca", order:1,selected:false},
+									{answer:"quase nunca", order:2,selected:false},
+									{answer:"mensalmente", order:3,selected:false},
+									{answer:"diariamente", order:4,selected:false},
+									{answer:"n/a", order:5,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "com que frequência você verifica o seu extrato?",
+								answers: [
+									{answer:"nunca", order:1,selected:false},
+									{answer:"quase nunca", order:2,selected:false},
+									{answer:"mensalmente", order:3,selected:false},
+									{answer:"diariamente", order:4,selected:false},
+									{answer:"n/a", order:5,selected:false},
+								]
+
+							}
+						]
+					}, 
+					{
+						name:"dívidas",
+						order:2,
+						o_que_evitar:[
+							{option:"COMPRAR ALGO POR IMPULSO SEM NEGOCIAR O PREÇO",selected:false},
+							{option:"PAGAR APENAS UMA PARTE DA FATURA DO CARTÃO DE CRÉDITO E/OU ENTRAR NO LIMITE DO CHEQUE ESPECIAL",selected:false},
+							{option:"FAZER EXCESSIVOS GASTOS SUPÉRFLUOS (EX.: HAPPY HOUR, FESTAS, BEBIDAS, ETC)",selected:false},
+							{option:"FAZER COMPRAS QUANDO FOR PASSEAR NO SHOPPING",selected:false},
+							{option:"COMER FORA DE CASA",selected:false},
+							{option:"PEDIR DINHEIRO EMPRESTADO PARA PARENTES E AMIGOS",selected:false},
+							{option:"FAZER FINANCIAMENTO. SE FIZER, FUGIR DE PROPOSTAS COMPLICADAS",selected:false},
+							{option:"USAR APENAS O DINHEIRO COMO FORMA DE STATUS",selected:false},
+							{option:"USAR SEU DINHEIRO COM JOGO DA SORTE",selected:false},
+						],
+						o_que_fazer:[
+							{option:"LEVANTAR O VALOR TOTAL DAS DÍVIDAS",selected:false},
+							{option:"COMPRAR SEMPRE À VISTA",selected:false},
+							{option:"COMPARTILHAR COM A FAMÍLIA A SITUAÇÃO FINANCEIRA",selected:false},
+							{option:"TER UM BOM CONTROLE FINANCEIRO DE GASTOS E RECEITAS",selected:false},
+							{option:"PAGAR AS DÍVIDAS COM JUROS MAIS ALTOS PRIMEIRO",selected:false},
+							{option:"RENEGOCIAR AS DÍVIDAS JÁ ASSUMIDAS",selected:false},
+							{option:"LEVAR A PRÓPRIA COMIDA PARA O TRABALHO AO INVÉS DE COMER FORA",selected:false},
+							{option:"PENSAR: SERÁ QUE EU PRECISO DISSO?",selected:false},
+							{option:"CRIAR FUNDO DE EMERGÊNCIA",selected:false},
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ DÁ PARA SEU NÍVEL DE ENDIVIDAMENTO?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUE NOTA VOCÊ DÁ PARA A EVOLUÇÃO DAS SUAS DÍVIDAS?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "COMO ESTÁ SEU GRAU DE ENDIVIDAMENTO?",
+								answers: [
+									{answer:"MINHA DÍVIDA É BEM MAIOR DO QUE MEU PATRIMONIO", order:1,selected:false},
+									{answer:"MINHA DÍVIDA É MAIOR DO QUE MEU PATRIMONIO", order:2,selected:false},
+									{answer:"MINHA DÍVIDA É IGUAL AO QUE MEU PATRIMONIO", order:3,selected:false},
+									{answer:"MEU PATRIMONIO É MAIOR", order:4,selected:false},
+									{answer:"MEU PATRIMONIO É BEM MAIOR", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "QUANTO DA SUA RENDA MENSAL VOCÊ COMPROMETE COM DÍVIDAS?",
+								answers: [
+									{answer:"GASTO COM PARCELAS MAIS DO QUE EU GANHO", order:6,selected:false},
+									{answer:"GASTO O MESMO COM PARCELAS DO QUE EU GANHO", order:6,selected:false},
+									{answer:"GASTO MENOS DA METADE DA MINHA RENDA COM PARCELAS DO QUE EU GANHO", order:6,selected:false},
+									{answer:"GASTO BEM MENOS DO QUE GANHO", order:6,selected:false},
+									{answer:"TENTO COMPRAR À VISTA E TENHO POUCAS OU NENHUMA PARCELAS", order:6,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					}, 
+					{
+						name:"receita/plano B",
+						order:3,
+						o_que_evitar:[
+							{option:"LARGAR TUDO POR UMA IDEIA CRUA",selected:false},
+							{option:"FICAR INSATISFEITO NO TRABALHO POR NÃO TER UM PLANO B",selected:false},
+							{option:"PARAR DE SONHAR E FICAR PARALISADO PELO NOVO MUNDO",selected:false},
+							{option:"PENSAR EM APOSENTADORIA COMO PRISÃO DA PREVIDÊNCIA",selected:false},
+							{option:"SER SUPER OTIMISTA COM O FUTURO",selected:false},
+							{option:"ENTRAR EM ESQUEMAS FINANCEIROS",selected:false},
+							{option:"MONTAR NEGÓCIOS DE ACORDO COM TENDÊNCIAS MOMENTÂNEAS",selected:false},
+							{option:"FICAR PRESO EM JUROS",selected:false},
+							{option:"ACHAR QUE AS COISAS SÃO FÁCEIS",selected:false}, 
+						],
+						o_que_fazer:[
+							{option:"PENSAR NUM NOVO NEGÓCIO",selected:false},
+							{option:"ADQUIRIR HABILIDADES NOVAS PARA CRESCER NA EMPRESA",selected:false},
+							{option:"INVESTIR EM IMÓVEIS COM INTELIGÊNCIA",selected:false},
+							{option:"MONTAR PROJETO DO SONHO: RESTAURANTE, POUSADA, VIRAR MÚSICO",selected:false},
+							{option:"ESTUDAR FINANÇAS E INVESTIMENTOS",selected:false},
+							{option:"CONTRIBUIR PARA UMA STARTUP",selected:false},
+							{option:"ESCREVER UM BUSINESS PLAN DA MINHA IDEIA",selected:false},
+							{option:"CONSULTAR OS MENORES JUROS PARA INVESTIR EM UM NOVO NEGOCIO",selected:false}, 
+							{option:"PLANEJAMENTO DE MEU NEGÓCIO",selected:false}, 
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ DÁ PARA SEU PLANO B?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUE NOTA VOCÊ DÁ PARA A EVOLUÇÃO DO SEU PLANO B?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "AVALIE O SEU CONHECIMENTO SOBRE DINHEIRO",
+								answers: [
+									{answer:"NENHUM CONHECIMENTO", order:1,selected:false},
+									{answer:"TENHO POUCO CONHECIMENTO", order:2,selected:false},
+									{answer:"TENHO BOM CONHECIMENTO", MAS POSSO MELHORAR", order:3,selected:false},
+									{answer:"DOMINO O ASSUNTO", order:4,selected:false},
+									{answer:"DOMINO O ASSUNTO TOTALMENTE", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "QUANDO VOCÊ PENSA EM DINHEIRO VOCÊ",
+								answers: [
+									{answer:"FICA DESESPERADO", order:1,selected:false},
+									{answer:"FICA DEPRIMIDO", order:2,selected:false},
+									{answer:"FICA PREOCUPADO", order:3,selected:false},
+									{answer:"FICO MUITO ANIMADO", order:4,selected:false},
+									{answer:"TEM UMA BOA RELAÇÃO COM O DINHEIRO", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					},
+					{
+						name:"investimento",
+						order:4,
+						o_que_evitar:[
+							{option:"ESCOLHER INVESTIMENTOS SEM TER UMA ESTRATÉGIA DEFINIDA",selected:false},
+							{option:"INVESTIR EM ESTRATÉGIAS QUE EU NÃO CONHEÇA OU NÃO DOMINO",selected:false},
+							{option:"ABANDONAR O SETUP POR “ACHISMO” E PERDER O FOCO NA MINHA ESTRATÉGIA",selected:false},
+							{option:"TORNAR MUITO COMPLICADO O MEU INVESTIMENTO (EXCESSO DE DIVERSIFICAÇÃO)",selected:false},
+							{option:"ESCOLHER UM INVESTIMENTO QUE NÃO SE ADAPTE AO MEU PERFIL",selected:false},
+							{option:"INVESTIR E DEPOIS ABANDONAR SUA APLICAÇÃO",selected:false},
+							{option:"TOMAR DECISÕES COM BASE EM FONTES DE NOTÍCIAS NÃO CONFIÁVEIS",selected:false},
+							{option:"SER GANANCIOSO (EXCESSO)",selected:false}, 
+							{option:"PERDER O CONTROLE DA MINHA ESTRATÉGIA",selected:false},  
+						],
+						o_que_fazer:[
+							{option:"FOCAR NO LUCRO DO INVESTIMENTO E NÃO NO TAMANHO DA RIQUEZA",selected:false},
+							{option:"MANTER OS INVESTIMENTOS",selected:false},
+							{option:"AUMENTAR MEU CONHECIMENTO SOBRE INVESTIMENTOS",selected:false},
+							{option:"ESCOLHER UM INVESTIMENTO QUE EU POSSA ACOMPANHAR",selected:false},
+							{option:"DIVERSIFICAR OS INVESTIMENTOS (NÃO COLOCAR TODOS OS OVOS EM APENAS UM CESTO)",selected:false},
+							{option:"DEFINIR UM LIMITE PARA AS PERDAS",selected:false},
+							{option:"FAZER UMA POUPANÇA E/OU INVESTIMENTOS PARA OS FILHOS PEQUENOS",selected:false},
+							{option:"MELHORAR O CONTROLE E ENCONTRAR OUTRA FONTE DE RECEITA (OPORTUNIDADE)",selected:false},
+							{option:"ORGANIZAR O MEU PENSAMENTO EM RELAÇÃO A INVESTIMENTO",selected:false},
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ DÁ PARA QUALIDADE NA GESTÃO DO SEUS INVESTIMENTOS?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUE NOTA VOCÊ DÁ PARA A EVOLUÇÃO DA QUALIDADE NA GESTÃO DOS SEUS INVESTIMENTOS?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "SEU CONHECIMENTO DE INVESTIMENTO É:",
+								answers: [
+									{answer:"CONHEÇO O QUE APRENDI NESSE CURSO", order:1,selected:false},
+									{answer:"TENHO POUCO CONHECIMENTO", order:2,selected:false},
+									{answer:"CONHEÇO OS MEUS PRODUTOS QUE O MEU GERENTE ME OFERECE", order:3,selected:false},
+									{answer:"TENHO CONHECIMENTO E PROCURO ME INFORMAR NOS NOTICIÁRIOS", order:4,selected:false},
+									{answer:"TENHO BASTANTE CONHECIMENTO", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "QUANTO DA SUA RENDA MENSAL VOCÊ INVESTE?",
+								answers: [
+									{answer:"NADA, GASTO MAIS DO QUE GANHO", order:1,selected:false},
+									{answer:"QUASE NADA, AINDA ESTOU EQUILIBRANDO MEU ORÇAMENTO", order:2,selected:false},
+									{answer:"ATÉ 10% DA MINHA RENDA", order:3,selected:false},
+									{answer:"ATÉ 30% DA MINHA RENDA", order:4,selected:false},
+									{answer:"ACIMA DE 30% DA MINHA RENDA", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					},
+				]
+			},
+			{
+				order:2,
+				name:"saúde",
+				color:"4eb5a4",
+				logo:"logo_saude.png",
+				subresources:[
+					{
+						name:"gestão da saúde",
+						order:1,
+						o_que_evitar:[
+							{option:"EVITAR FICAR LONGOS PERÍODOS SEM AVALIAR (FAZER EXAMES)",selected:false},
+							{option:"EVITAR UTILIZAR REMÉDIOS QUE MASCAREM O VERDADEIRO PROBLEMA (AUTOMEDICAÇÃO)",selected:false},
+							{option:"NÃO DAR ATENÇÃO NAS MUDANÇAS NO CORPO (DORES, SINAIS, ETC)",selected:false},
+							{option:"UTILIZAR A BEBIDA ALCOÓLICA COMO UM MEIO PARA NÃO ME SENTIR MAL OU PARA SE SENTIR BEM",selected:false},
+							{option:"SER FUMANTE E FUMANTE PASSIVO",selected:false},
+							{option:"FAZER O USO DE MEDICAMENTOS CONTROLADOS SEM ORIENTAÇÃO PROFISSIONAL",selected:false},
+							{option:"NÃO NEGLIGENCIAR AS MINHAS DORES, REAÇÕES FÍSICAS E SENTIMENTOS",selected:false},
+							{option:"NÃO PASSAR POR CIMA DE SENTIMENTOS QUE ME ANGUSTIAM, SUBSTITUINDO POR OUTROS SENTIMENTOS",selected:false},
+							{option:"NÃO SACRIFICAR A SAÚDE POR CAUSA DE TRABALHO OU ESTUDO",selected:false},
+						],
+						o_que_fazer:[
+							{option:"OBSERVAR MINHAS REAÇÕES CORPORAIS E EMOCIONAIS NAS SITUAÇÕES ESTRESSANTES",selected:false},
+							{option:"OBSERVAR SINAIS QUE O CORPO ME DÃO E ATUAR PREVENTIVAMENTE (DORES DE CABEÇA FREQUENTE, DORES NO CORPO...)",selected:false},
+							{option:"BUSCAR ORIENTAÇÕES MÉDICA OU DE PROF. DA SAÚDE SEMPRE QUE NECESSÁRIO",selected:false},
+							{option:"PERCEBER DIAS E SEMANASDE BAIXA PRODUTIVIDADE (E ASPECTOS ENVOLVIDOS)",selected:false},
+							{option:"CORRELACIONAR MEUS SINTOMAS FÍSICOS COM ASPECTOS EMOCIONAIS NO MEU DIA",selected:false},
+							{option:"PLANEJAR MEU DIA A PARTIR DOS MEUS HORÁRIOS DE MAIOR DESEMPENHO MENTAL",selected:false},
+							{option:"OBSERVAR OS MOTIVOS DE CADA DOR E MAL ESTAR (CAPACIDADE DE REFLEXÃO)",selected:false},
+							{option:"TER CONHECIMENTO DE DOENÇAS HEREDITÁRIAS (HISTÓRICO FAMILIAR)",selected:false},
+							{option:"DEIXAR A SAÚDE CUIDAS DE SI",selected:false},
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ DÁ PARA O SEU CUIDADO GERAL COM SAÚDE?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUE NOTA VOCÊ DÁ PARA A EVOLUÇÃO DOS SEUS CUIDADOS PREVENTIVOS COM A SAÚDE?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "COM QUE FREQUÊNCIA VOCÊ ESTÁ FISICAMENTE DEBILITADO OU DOENTE?",
+								answers: [
+									{answer:"SEMPRE", order:1,selected:false},
+									{answer:"QUASE SEMPRE", order:2,selected:false},
+									{answer:"AS VEZES", order:3,selected:false},
+									{answer:"RARAMENTE", order:4,selected:false},
+									{answer:"NUNCA", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "O QUANTO VOCÊ SE ALIMENTA NAS HORAS CORRETAS?",
+								answers: [
+									{answer:"NÃO ME ALIMENTO NAS HORAS CORRETAS", order:1,selected:false},
+									{answer:"SÓ AS VEZES ME ALIMENTO NAS HORAS CORRETAS", order:2,selected:false},
+									{answer:"ME ALIMENTO EM HORÁRIOS MODERADAMENTE ADEQUADOS", order:3,selected:false},
+									{answer:"FREQUENTEMENTE ME ALIMENTO NAS HORAS CORRETAS", order:4,selected:false},
+									{answer:"ME ALIMENTO NAS HORAS CORRETAS", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					}, 
+					{
+						name:"alimentação",
+						order:2,
+						o_que_evitar:[
+							{option:"SEGUIR UMA DIETA RESTRITA",selected:false},
+							{option:"EVITAR PRODUTOS INDUSTRIALIZADOS COM GRANDES PRAZOS DE VALIDADE",selected:false},
+							{option:"SUBSTITUIR A ÁGUA POR OUTROS LÍQUIDOS (SUCO, REFRIGERANTE, ETC)",selected:false},
+							{option:"ME RECOMPENSAR COM ALIMENTOS QUE DÃO UMA FONTE DE PRAZER IMEDIATAS (EU MEREÇO!)",selected:false},
+							{option:"EVITAR COMER DESCONTROLADAMENTE SEM DAR ATENÇÃO A QUANTIDADE E QUALIDADE",selected:false},
+							{option:"EVITAR EO EXCESSO DE SAL E AÇUCAR REFINADOS",selected:false},
+							{option:"EVITAR ME ALIMENTAR TRABALHANDO, EM FRENTE A TV, FALANDO AO TELEFONE (SEM DAR ATENÇÃO)",selected:false},
+							{option:"EVITAR TOMAR LÍQUIDOS DURANTE AS REFEIÇÕES",selected:false},
+							{option:"EVITAR ALIMENTOS HEIPERCALÓRICOS",selected:false},
+						],
+						o_que_fazer:[
+							{option:"ESCOLHER UM ALIMENTO QUE NÃO TENHA AFINIDADE E TENTAR INTRODUZI-LO NO SEU DIA-A-DIA",selected:false},
+							{option:"INSERIR FONTES SAUDÁVEIS DE GORDURA (CASTANHAS, COCO, MANTEIGA GHEE, AZEITE DE OLIVA...)",selected:false},
+							{option:"AUMENTAR O REPERTÓRIO ALIMENTAR (DIVERSIFICAR ALIMENTOS)",selected:false},
+							{option:"BEBER MAIS ÁGUA",selected:false},
+							{option:"COMER O QUE FOR MAIS FRESCO E MENOS PROCESSADO",selected:false},
+							{option:"ORGANIZAR MEUS HÁBITOS ALIMENTARES (DIAS, QUANTIDADES, O QUE COMER...)",selected:false},
+							{option:"COZINHAR O MEU PRÓPRIO ALIMENTO (EM ALGUM MOMENTO)",selected:false},
+							{option:"DAR PREFERÊNCIA POR ALIMENTOS INTEGRAIS E CEREAIS",selected:false},
+							{option:"ALTERNAR FONTES DE PROTEÍNA (CARNES, PEIXES E AVES)",selected:false},
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ ATRIBUI AOS SEUS HÁBITOS ALIMENTARES?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUAL A NOTA PARA A MELHORA DOS SEUS HÁBITOS ALIMENTARES?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "VOCÊ ACREDITA QUE CONSOME NUTRIENTES DE FORMA EQUILIBRADA?",
+								answers: [
+									{answer:"RUIM", order:1,selected:false},
+									{answer:"PODERIA MELHORAR", order:2,selected:false},
+									{answer:"MÉDIA", order:3,selected:false},
+									{answer:"BOA", order:4,selected:false},
+									{answer:"MUITO BOA", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "VOCÊ SE ALIMENTA NAS HORAS CERTAS?",
+								answers: [
+									{answer:"NUNCA", order:1,selected:false},
+									{answer:"UMA VEZ POR SEMANA", order:2,selected:false},
+									{answer:"DUAS VEZES POR SEMANA", order:3,selected:false},
+									{answer:"TRÊS VEZES POR SEMANA", order:4,selected:false},
+									{answer:"QUATRO OU MAIS VEZES POR SEMANA", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					}, 
+					{
+						name:"exercício físico",
+						order:3,
+						o_que_evitar:[
+							{option:"SER SEDENTÁRIO 
+							{option:"DEIXAR DE REALIZAR AVALIAÇÃO FÍSICA ",selected:false},
+							{option:"REALIZAR EXERCÍCIOS FÍSICOS SEM ORIENTAÇÃO PROFISSIONAL",selected:false},
+							{option:"REALIZAR APENAS EXERCÍCIOS FÍSICOS E NÃO TER UM DIA ATIVO",selected:false},
+							{option:"FAZER UMA ATIVIDADE UMA VEZ POR SEMANA E NÃO REALIZAR MAIS NENHUM EXERCÍCIO",selected:false},
+							{option:"REALIZAR UM MESMO TREINO POR UM PERÍODO LONGO",selected:false},
+							{option:"REALIZAR TREINOS COM A MINHA CAPACIDADE MÁXIMA SEM PROGRESSÃO",selected:false},
+							{option:"SEGUIR BLOGUEIROS QUE NÃO SEGUEM ORIENTAÇÃO PROFISSIONAL",selected:false}, 
+							{option:"UTILIZAR MEDICAMENTOS PARA AUMENTAR O MEU RENDIMENTO FÍSICO",selected:false}, 
+						],
+						o_que_fazer:[
+							{option:"FAZER EXAMES MÉDICOS PERIODICAMENTE PARA PREVENIR A SAÚDE",selected:false},
+							{option:"UMA AVALIAÇÃO FÍSICA ANTES DE INICIAR QUALQUER ATIVIDADE FÍSICA",selected:false},
+							{option:"REALIZAR EXERCÍCIOS FÍSICOS COM ORIENTAÇÃO PROFISSIONAL",selected:false},
+							{option:"VARIAR O TREINO DE ACORDO COM OBJETIVO E INDIVIDUALIDADE",selected:false},
+							{option:"ME ESPELHAR EM ALGUÉM QUE ADMIRA PARA SOMAR A MINHA MOTIVAÇÃO DE TREINO",selected:false},
+							{option:"CONHECER UM TREINO OU EXERCÍCIO NOVO E PROCURAR INFORMAÇÕES COM PROFISSIONAIS CAPACITADOS PARA SABER SE ESTOU {option:"APTO A REALIZÁ-LO",selected:false},
+							{option:"TER OBJETIVOS COMO PONTO DE PARTIDA",selected:false}, 
+							{option:"USAR FONTES DE ENERGIA DE ALIMENTOS E SUPLEMENTOS, QUANDO ORIENTADO POR NUTRICIONISTA",selected:false}, 
+							{option:"SER PERSISTENTE AO REALIZAR AS ATIVIDADES FÍSICAS",selected:false}, 
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ ATRIBUI À SUA CONDIÇÃO FÍSICA?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUE NOTA VOCÊ DÁ PARA A EVOLUÇÃO DA SUA CONDIÇÃO FÍSICA?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "COMO VOCÊ AVALIA A SUA DISPOSIÇÃO FÍSICA?",
+								answers: [
+									{answer:"RUIM", order:1,selected:false},
+									{answer:"PODERIA MELHORAR", order:2,selected:false},
+									{answer:"MÉDIA", order:3,selected:false},
+									{answer:"BOA", order:4,selected:false},
+									{answer:"MUITO BOA", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "COM QUE FREQUÊNCIA VOCÊ PRATICA ATIVIDADES FÍSICAS POR SEMANA?",
+								answers: [
+									{answer:"NUNCA", order:1,selected:false},
+									{answer:"UMA VEZ POR SEMANA", order:2,selected:false},
+									{answer:"DUAS VEZES POR SEMANA", order:3,selected:false},
+									{answer:"TRÊS VEZES POR SEMANA", order:4,selected:false},
+									{answer:"QUATRO OU MAIS VEZES POR SEMANA", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					},
+					{
+						name:"sono e respiração",
+						order:4,
+						o_que_evitar:[
+							{option:"RETARDAR O MOMENTO DE IR DORMIR FICANDO PRESO A TV, COMPUTADOR, INTERNET E ETC",selected:false},
+							{option:"EVITAR DORMIR TODOS OS DIAS APÓS A MEIA NOITE",selected:false},
+							{option:"TER UM HORÁRIO DIFERENTE PARA DORMIR EM CADA DIA",selected:false},
+							{option:"DORMIR MENOS DE 6HS POR DIA",selected:false},
+							{option:"COLOCAR O DESPERTADOR NO MODO SONECA",selected:false},
+							{option:"TROCAR O SONO DA NOITE PELO SONO DO DIA",selected:false},
+							{option:"TROCAR UMA NOITE DE SONO POR TRABALHO OU ESTUDO COM FREQUÊNCIA",selected:false},
+							{option:"TER UMA RESPIRAÇÃO CURTA",selected:false},
+							{option:"RESPIRAR SOMENTE PELA BOCA",selected:false}, 
+						],
+						o_que_fazer:[
+							{option:"CRIAR ROTINAS DE RITMOS DE SONO (RITUAL ANTES DE DORMIR)",selected:false},
+							{option:"CRIAR UM AMBIENTE QUE PERMITA DORMIR COM QUALIDADE",selected:false},
+							{option:"DETERMINAR UM HORÁRIO PARA DORMIR QUE TE PROPORCIONE MELHOR QUALIDADE DO DIA SEGUINTE",selected:false},
+							{option:"ESCUTAR ALGO MAIS CALMO, QUE ME FAÇA RELAXAR (UM RITMO MAIS ACELERADO VAI TE DEIXAR AGITADO)",selected:false},
+							{option:"LER LIVROS MAIS LEVES QUE NÃO CHAMEM MINHA ATENÇÃO ANTES DE DORMIR",selected:false},
+							{option:"PRESTAR ATENÇÃO NA MINHA RESPIRAÇÃO, NO PADRÃO DE RESPIRAÇÃO (CURTA, ABDOMINAL, PEITORAL)",selected:false},
+							{option:"DAR PREFERÊNCIA POR LUGARES ABERTOS E COM AR PURO",selected:false},
+							{option:"UTILIZAR A RESPIRAÇÃO COMO ÂNCORA SEMPRE QUE ESTIVER ESTRESSADO, ANSIOSO OU NERVOSO",selected:false},
+							{option:"COLOCAR ATENÇÃO NA RESPIRAÇÃO ANTES DE UMA TOMADA DE DECISÃO (REUNIÕES, APRESENTAÇÕES, PALESTRAS), RESPIRAR {option:"PROFUNDAMENTE",selected:false},
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ ATRIBUI À QUALIDADE ATUAL DO SEU SONO?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUE NOTA VOCÊ DÁ PARA A EVOLUÇÃO DO SEU SONO?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "VOCÊ COSTUMA TER UMA BOA NOITE DE SONO DURANTE A SEMANA?",
+								answers: [
+									{answer:"NÃO DURMO BEM ", order:1,selected:false},
+									{answer:"RARAMENTE", order:1,selected:false},
+									{answer:"METADE DA SEMANA", order:1,selected:false},
+									{answer:"QUASE SEMPRE", order:1,selected:false},
+									{answer:"A SEMANA TODA", order:1,selected:false},
+									{answer:"#N/A", order:1,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "COM QUE FREQUÊNCIA VOCÊ PERCEBE QUE SUAS TENSÕES DIÁRIAS REFLETEM NO SEU SONO/ RESPIRAÇÃO?",
+								answers: [
+									{answer:"NÃO DURMO CEDO", order:1,selected:false},
+									{answer:"DURMO CEDO ALGUNS DIAS APENAS", order:2,selected:false},
+									{answer:"METADE DA SEMANA", order:3,selected:false},
+									{answer:"SOMENTE DURANTE A SEMANA", order:4,selected:false},
+									{answer:"DURMO CEDO A SEMANA TODA", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					},
+				]
+			},
+			{
+				order:3,
+				name:"conhecimento",
+				color:"4eb5a4",
+				logo:"logo_conhecimento.png",
+				subresources:[
+					{
+						name:"organização do aprendizado",
+						order:1,
+						o_que_evitar:[
+							{option:"FUGIR DOS ESTUDOS, DOS TEXTOS, DAS AULAS",selected:false},
+							{option:"QUERER AFOBADAMENTE DEFINIR QUAL É A SOLUÇÃO OU RESPOSTA DE UM PROBLEMA",selected:false},
+							{option:"ME ENGANAR ACREDITANDO QUE EU ESTUDO PARA A EMPRESA, PARA A ESCOLA OU PARA ALGUÉM (OBRIGAÇÃO)",selected:false},
+							{option:"SUFOCAR A CRIANÇA DENTRO DE VOCÊ E A CRIATIVIDADE DAS SUAS CRIANÇAS",selected:false},
+							{option:"FICAR DESATUALIZADO",selected:false},
+							{option:"ME ILUDIR ACHANDO QUE HÁ APRENDIZADO SEM REPETIÇÃO",selected:false},
+							{option:"FICAR DANDO DESCULPAS COMO NÃO CONSIGO, OU NÃO TENHO HABILIDADE PARA APRENDER TAL TEMA",selected:false},
+							{option:"ESTUDAR E APRENDER POR OBRIGAÇÃO",selected:false},
+							{option:"FICAR NO MUNDO DA TEORIA E DA ARGUMENTAÇÃO",selected:false}, 
+						],
+						o_que_fazer:[
+							{option:"LER X PÁGINAS DE UM LIVRO POR DIA",selected:false}, 
+							{option:"ASSISTIR UM DOCUMENTÁRIO POR SEMANA",selected:false}, 
+							{option:"CRIAR ESTÍMULOS PARA MINHA CURIOSIDADE E CRIATIVIDADE",selected:false}, 
+							{option:"DAR PROPÓSITO AO MEU APRENDIZADO",selected:false}, 
+							{option:"EXERCITAR A MINHA MENTE PARA OBSERVAR AS OPÇÕES OCULTAS QUE SE MANIFESTAM QUANDO DEPARO COM UM PROBLEMA",selected:false}, 
+							{option:"ACEITAR QUE O ERRO FAZ PARTE DO APRENDIZADO",selected:false}, 
+							{option:"DEFINIR UM OBJETIVO CLARO PARA O APRENDIZADO ESCOLHIDO E METAS PARA ALCANÇÁ-LO",selected:false}, 
+							{option:"ACREDITAR QUE O CONHECIMENTO É O QUE ME DÁ PODER",selected:false}, 
+							{option:"FAZER DESAFIOS PARA O MEU APRENDIZADO",selected:false}, 
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ DÁ AOS SEUS HÁBITOS ATUAIS DE ESTUDO?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUE NOTA VOCÊ DÁ PARA A MELHORA DOS SEUS HÁBITOS DE ESTUDO?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "QUANTO TEMPO POR SEMANA VOCÊ GASTA ESTUDANDO E APRENDENDO?",
+								answers: [
+									{answer:"UMA HORA OU MENOS", order:1,selected:false},
+									{answer:"ATÉ DUAS HORAS", order:2,selected:false},
+									{answer:"ATÉ QUATRO HORAS", order:3,selected:false},
+									{answer:"ATÉ OITO HORAS", order:4,selected:false},
+									{answer:"MAIS QUE OITO HORAS", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "VOCÊ SE SENTE CONFORTÁVEL EM ESCOLHER O QUE VAI ESTUDAR/APRENDER?",
+								answers: [
+									{answer:"MUITO DESCONFORTÁVEL", order:1,selected:false},
+									{answer:"DESCONFORTÁVEL", order:3,selected:false},
+									{answer:"NÃO PENSO MUITO A RESPEITO", order:3,selected:false},
+									{answer:"CONFIANTE NA MAIOR PARTE DAS VEZES", order:4,selected:false},
+									{answer:"TOTAL CONFIANÇA", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					}, 
+					{
+						name:"TOMADA DE DECISÃO",
+						order:2,
+						o_que_evitar:[
+							{option:"ESCOLHAS QUE TRAGAM ARREPENDIMENTO, COMPLICAÇÕES, INSATISFAÇÃO E TRISTEZA ",selected:false},
+							{option:"SER MANIPULADO POR PESSOAS E/OU PROPAGANDA",selected:false},
+							{option:"TOMAR DECISÕES COM BASE NA OPINIÃO DOS OUTROS",selected:false},
+							{option:"TOMAR DECISÕES COM BASE EM ACHISMOS",selected:false},
+							{option:"TOMAR DECISÕES DE CABEÇA QUENTE OU SOB PRESSÃO",selected:false},
+							{option:"ME COMPROMETER SEM NECESSIDADE",selected:false},
+							{option:"ESCOLHER ALGO RUIM PARA EVITAR CONSTRANGIMENTO",selected:false},
+							{option:"FAZER ESCOLHAS COLETIVAS SOZINHO",selected:false},
+							{option:"DELEGAR A RESPONSABILIDADE SOBRE AS ESCOLHAS",selected:false},
+						],
+						o_que_fazer:[
+							{option:"LEVANTAR DADOS SOBRE AS DECISÕES QUE IRÁ TOMAR",selected:false},
+							{option:"OLHAR TODOS OS PONTOS DE VISTA",selected:false},
+							{option:"CORTAR AS PIORES OPÇÕES PRIMEIRO",selected:false},
+							{option:"AVALIAR COM A RAZÃO E DECIDIR COM A EMOÇÃO",selected:false},
+							{option:"BUSCAR A SOLUÇÃO MAIS SIMPLES",selected:false},
+							{option:"CRIAR CENÁRIOS, PENSAR NAS CONSEQUÊNCIAS E FAZER UMA CHECAGEM PRÉVIA",selected:false},
+							{option:"CONSULTAR PESSOAS SÁBIAS E ESCOLHER COM CALMA",selected:false},
+							{option:"SE COLOCAR NO LUGAR DO OUTRO",selected:false},
+							{option:"BUSCAR INCONSISTÊNCIA NA SUA ESCOLHA",selected:false},
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ DÁ ÀS DECISÕES QUE VOCÊ TOMA?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUE NOTA VOCÊ DÁ À QUALIDADE DAS SUAS DECISÕES?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "VOCÊ TEM CONFIANÇA PARA TOMAR DECISÕES?",
+								answers: [
+									{answer:"ESTOU SEMPRE INSEGURO", order:1,selected:false},
+									{answer:"TOMO A DECISÃO, MAS TENHO MEDO DO RESULTADO", order:2,selected:false},
+									{answer:"MAIS OU MENOS CONFIANTE", order:3,selected:false},
+									{answer:"CONFIANTE A MAIOR PARTE DAS VEZES", order:4,selected:false},
+									{answer:"MUITO CONFIANTE", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "QUÃO BOM VOCÊ SE CONSIDERA BOM EM APRENDER COM OS PRÓPRIOS ERROS?",
+								answers: [
+									{answer:"PÉSSIMO", order:1,selected:false},
+									{answer:"RUIM", order:2,selected:false},
+									{answer:"MÉDIO", order:3,selected:false},
+									{answer:"BOM", order:4,selected:false},
+									{answer:"MUITO BOM", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					}, 
+					{
+						name:"HEURÍSTICA/SABEDORIA",
+						order:3,
+						o_que_evitar:[
+							{option:"SÓ PENSAR NOS RESULTADOS",selected:false},
+							{option:"DESISTIR NO MEIO DO CAMINHO",selected:false},
+							{option:"FALAR MUITO E FAZER POUCO",selected:false},
+							{option:"DAR MAL EXEMPLO",selected:false},
+							{option:"COMPARAR O PROBLEMA DO OUTRO AO MEU",selected:false},
+							{option:"CONFUNDIR O QUE SE SABE COM A REALIDADE",selected:false},
+							{option:"DESVALORIZAR CONHECIMENTO POPULARES E TRADICIONAIS",selected:false},
+							{option:"PARAR DE EVOLUIR E APRENDER COISAS NOVAS",selected:false},
+							{option:"SENTIR-SE SUPERIOR AO OUTRO DEVIDO AO SEU ALTO CONHECIMENTO",selected:false},  
+						],
+						o_que_fazer:[
+							{option:"CONVERSAR COM AS PESSOAS SOBRE O QUE ELAS FAZEM BEM",selected:false},
+							{option:"PRATICAR ALGO NOVO SEMPRE QUE POSSÍVEL",selected:false},
+							{option:"ENSINAR PELO EXEMPLO",selected:false},
+							{option:"FAZER ALGO NO ESTADO DA ARTE",selected:false},
+							{option:"OBSERVAR OS OUTROS EM AÇÃO",selected:false},
+							{option:"PERSISTIR NA PRÁTICA",selected:false},
+							{option:"FOCAR A ENERGIA NA MELHORA",selected:false},
+							{option:"FOCAR NO PROCESSO E NÃO NO RESULTADO E ACRESCENTAR MELHORIAS NO PROCESSO",selected:false},
+							{option:"COMPARTILHAR O MEU APRENDIZADO COM OUTRAS PESSOAS",selected:false},
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ DÁ A SUA CAPACIDADE DE COLOCAR UM CONHECIMENTO NA PRÁTICA?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUE NOTA VOCÊ DÁ À SUA CAPACIDADE DE SER PRÁTICO?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "COM RELAÇÃO AO QUE VOCÊ SABE, VOCÊ CONSIDERA QUE:",
+								answers: [
+									{answer:"NÃO SEI NADA", order:1,selected:false},
+									{answer:"SEI MUITO POUCO", order:2,selected:false},
+									{answer:"SEI O SUFICIENTE", order:3,selected:false},
+									{answer:"SEI MUITO", order:4,selected:false},
+									{answer:"CONHEÇO MUITO", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "QUAL A IMPORTÂNCIA DO HUMOR EM SUA VIDA?",
+								answers: [
+									{answer:"TÁ RINDO DE QUÊ?", order:1,selected:false},
+									{answer:"NÃO TENHO ACHADO MUITA GRAÇA NAS COISAS", order:2,selected:false},
+									{answer:"ACHO GRAÇA EM ALGUMAS COISAS", order:3,selected:false},
+									{answer:"ADORA HUMOR", order:4,selected:false},
+									{answer:"TO RINDO À TOA", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					},
+					{
+						name:"CARREIRA - PLANO B",
+						order:4,
+						o_que_evitar:[
+							{option:"PARAR NO TEMPO E NÃO SE ATUALIZAR, DANDO LUGAR A UM ROBÔ",selected:false},
+							{option:"ACEITAR TUDO SEM QUESTIONAR",selected:false},
+							{option:"FAZER UMA CRÍTICA DESTRUTIVA EM PÚBLICO",selected:false},
+							{option:"FAZER TRABALHOS QUE NÃO LEVAM AO APRENDIZADO",selected:false},
+							{option:"CULPAR O TRABALHO OU O PATRÃO PELA MINHA INSATISFAÇÃO",selected:false},
+							{option:"DECIDIR APENAS COM BASE NA OBRIGAÇÃO ESQUECENDO O PROPÓSITO",selected:false},
+							{option:"ESTRUTURAR A CARREIRA APENAS COM FOCO SOMENTE NO DINHEIRO",selected:false},
+							{option:"QUE A SUA EMPRESA PERCA A ALMA",selected:false}, 
+							{option:"ME ISOLAR DOS NOVOS DESAFIOS DO MUNDO",selected:false}, 
+						],
+						o_que_fazer:[
+							{option:"ME ATUALIZAR CONSTANTEMENTE (CONTATO COM A SUA ÁREA OU SUA ÁREA DE INTERESSE)",selected:false},
+							{option:"APRENDER A ME COMUNICAR (COMUNICAÇÃO VERBAL E CORPORAL)",selected:false},
+							{option:"APRIMORAR MINHA CAPACIDADE DE EMPATIA",selected:false},
+							{option:"IDENTIFICAR MEUS DONS E FOCAR NA SUA LAPIDAÇÃO",selected:false},
+							{option:"TER CLAREZA NO MEU OBJETIVO E PROPÓSITO",selected:false},
+							{option:"APERFEIÇOAR MINHA INTELIGÊNCIA EMOCIONAL",selected:false},
+							{option:"LER UM LIVRO POR MÊS E 1 ARTIGO POR SEMANA DE SUA ÁREA DE INTERESSE",selected:false},
+							{option:"CONSEGUIR TRANSFORMAR DINHEIRO E OPORTUNIDADES EM ARTE",selected:false}, 
+							{option:"FAZER O PLANEJAMENTO DAQUILO QUE ALMEJO",selected:false},
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ DÁ AO SEU TRABALHO?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUE NOTA VOCÊ DÁ PARA A EVOLUÇÃO DO SEU PLANO DE CARREIRA?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "QUANTOS LIVROS VOCÊ LÊ POR ANO?",
+								answers: [
+									{answer:"NENHUM", order:1,selected:false},
+									{answer:"ATÉ 2", order:2,selected:false},
+									{answer:"ATÉ 5", order:3,selected:false},
+									{answer:"ATÉ 10", order:4,selected:false},
+									{answer:"ACIMA DE 10", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "COM QUE FREQUÊNCIA VOCÊ PERCEBE QUE SUAS TENSÕES DIÁRIAS REFLETEM NO SEU SONO/ RESPIRAÇÃO?",
+								answers: [
+									{answer:"FALO APENAS PORTUGUÊS", order:1,selected:false},
+									{answer:"ENTENDO UM POUCO UMA SEGUNDA LINGUA", order:2,selected:false},
+									{answer:"ENTENDO BEM E FALO UM POUCO DE UMA SEGUNDA LINGUA", order:3,selected:false}, 
+									{answer:"SOU FLUENTE EM UMA SEGUNDA", order:4,selected:false},
+									{answer:"SOU FLUENTE EM 3 OU MAIS LINGUAS", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					},
+				]
+			},
+			{
+				order:4,
+				name:"tempo",
+				color:"4eb5a4",
+				logo:"logo_tempo.png",
+				subresources:[
+					{
+						name:"ORGANIZAÇÃO DO TEMPO",
+						order:1,
+						o_que_evitar:[
+							{option:"FAZER ATIVIDADES SEM TER UM OBJETIVO CLARO A SER ALCANÇADO",selected:false},
+							{option:"DEIXAR QUE MINHAS ATIVIDADES SEJAM SEMPRE URGENTES (APAGAR INCÊNDIOS)",selected:false},
+							{option:"DEIXAR TAREFAS INACABADAS",selected:false},
+							{option:"FICAR DESESPERADO E PARALISADO DIANTE DE IMPREVISTOS",selected:false},
+							{option:"CRIAR PLANEJAMENTO JUSTOS SEM ESPAÇOS PARA IMPREVISTOS E ADAPTAÇÕES",selected:false},
+							{option:"MARCAR VÁRIOS COMPROMISSOS NO MESMO TEMPO OU COM O TEMPO APERTADO",selected:false},
+							{option:"ACUMULAR ROUPAS/BENS QUE NÃO USA",selected:false},
+							{option:"DIZER SIM PARA TODAS AS SOLICITAÇÕES QUE LHE FORAM FEITAS",selected:false}, 
+							{option:"ESQUECER MEUS COMPROMISSOS COM FREQUÊNCIA",selected:false},  
+						],
+						o_que_fazer:[
+							{option:"DEFINIR METAS REALIZÁVEIS E MENSURÁVEIS",selected:false},
+							{option:"VERIFICAR OS RESULTADOS ATINGIDOS",selected:false},
+							{option:"DELEGAR AS TAREFAS SEM TRANSFERIR RESPONSABILIDADE",selected:false},
+							{option:"VERIFICAR UM FATO QUE POSSA SER UM PROBLEMA E ATUAR PARA SOLUCIONÁ-LO",selected:false},
+							{option:"FAZER NA HORA TUDO O QUE LEVAR MENOS DE 1 MINUTO",selected:false},
+							{option:"APRENDER A DIZER A DIZER NÃO",selected:false},
+							{option:"PROCURAR FOCAR EM UMA ATIVIDADE POR VEZ",selected:false},
+							{option:"REFLETIR AO FINAL DO DIA COMO MEU TEMPO FOI EMPREGADO E O QUE PODE SER MODIFICADO"",selected:false}, 
+							{option:"ARRUMAR E DEIXAR ARRUMADO O MEU LOCAL DE TRABALHO/ESTUDO",selected:false}, 
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ DÁ PARA A SUA ORGANIZAÇÃO PESSOAL E PROFISSIONAL?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUE NOTA VOCÊ DÁ PARA A EVOLUÇÃO DA SUA ORGANIZAÇÃO PESSOAL E PROFISSIONAL?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "COMO É SUA RELAÇÃO COM O TEMPO:",
+								answers: [
+									{answer:"ESTOU SEMPRE ATRASADO COM MINHAS ATIVIDADES", order:1,selected:false},
+									{answer:"ATRASO UMA BOA PARTE DE MINHAS ATIVIDADES", order:2,selected:false},
+									{answer:"FAÇO TUDO O QUE TENHO QUE FAZER, MAS NÃO SOBRA TEMPO PRA MAIS NADA", order:3,selected:false},
+									{answer:"EVENTUALMENTE ATRASO ALGUMA ATIVIDADE", order:4,selected:false},
+									{answer:"CONSIGO FAZER MINHAS ATIVIDADES E TENHO TEMPO DE SOBRA", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "COMO VOCÊ AVALIA A ORGANIZAÇÃO DE SUAS ATIVIDADES?",
+								answers: [
+									{answer:"SEM ORGANIZAÇÃO", order:1,selected:false},
+									{answer:"RARAMENTE ORGANIZADO", order:2,selected:false},
+									{answer:"ORGANIZADO ALGUMAS VEZES", order:3,selected:false},
+									{answer:"ORGANIZADO A MAIOR PARTE DAS VEZES", order:4,selected:false},
+									{answer:"MUITO ORGANIZADO", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					}, 
+					{
+						name:"PRODUTIVIDADE",
+						order:2,
+						o_que_evitar:[
+							{option:"DEIXAR AS TAREFAS QUE PODEM SER REALIZADAS IMEDIATAMENTE PARA MAIS TARDE",selected:false},
+							{option:"SER O ÚNICO CAPAZ DE CONSEGUIR REALIZAR UMA ATIVIDADE/TAREFA",selected:false},
+							{option:"FAZER VÁRIAS ATIVIDADES AO MESMO SEM SE CONCENTRAR EM NENHUMA (MULTITASKING)",selected:false},
+							{option:"FICAR FREQUENTEMENTE OLHANDO O CELULAR E AS REDES SOCIAIS",selected:false},
+							{option:"FOCAR APENAS NO PROBLEMA E DEIXAR DE FOCAR NA SOLUÇÃO",selected:false},
+							{option:"FAZER REUNIÕES EXTENSAS QUE ULTRAPASSEM 30 MINUTOS",selected:false},
+							{option:"QUERER SER PERFEITO E TER MEDO DO ERRO",selected:false},
+							{option:"PROCURAR SEMPRE UM RESPONSÁVEL EXTERNO EM ASSUMIR AS SUAS RESPONSABILIDADES",selected:false}, 
+							{option:"DISPERSAR MINHA CONCENTRAÇÃO",selected:false},
+						],
+						o_que_fazer:[
+							{option:"DEFINIR METAS REALIZÁVEIS E MENSURÁVEIS",selected:false}, 
+							{option:"VERIFICAR OS RESULTADOS ATINGIDOS",selected:false},
+							{option:"DELEGAR AS TAREFAS SEM TRANSFERIR RESPONSABILIDADE",selected:false},
+							{option:"VERIFICAR UM FATO QUE POSSA SER UM PROBLEMA E ATUAR PARA SOLUCIONÁ-LO",selected:false},
+							{option:"FAZER NA HORA TUDO O QUE LEVAR MENOS DE 1 MINUTO",selected:false},
+							{option:"APRENDER A DIZER A DIZER NÃO",selected:false},
+							{option:"PROCURAR FOCAR EM UMA ATIVIDADE POR VEZ",selected:false},
+							{option:"ORGANIZAR O MEU TEMPO PARA QUE POSSA REALIZAR TODAS AS ATIVIDADES DA EMPRESA",selected:false},
+							{option:"QUANDO ESTIVER COM A MENTE MUITO BLOQUEADA, CRIAR UM MAPA MENTAL COM MINHAS IDEIAS",selected:false},
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ DÁ PARA A SUA PRODUTIVIDADE?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUE NOTA VOCÊ DÁ EVOLUÇÃO DA SUA PRODUTIVIDADE?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "VOCÊ SE DISTRAI FACILMENTE ENQUANTO ESTÁ FAZENDO SUAS ATIVIDADES?",
+								answers: [
+									{answer:"SEMPRE ME DISTRAIO ENQUANTO ESTOU FAZENDO MINHAS ATIVIDADES", order:1,selected:false},
+									{answer:"ACABO DE DISTRAINDO E ISSO ATRASA MINHAS ATIVIDADES", order:2,selected:false},
+									{answer:"ME DISTRAIO UM POUCO, MAS SEMPRE CONSIGO FINALIZAR A ATIVIDADE QUE ESTOU FAZENDO", order:3,selected:false}, 
+									{answer:"ME DISTRAIO LEVEMENTE, SEM IMPACTO SIGNIFICATIVO NAS MINHAS ATIVIDADES", order:4,selected:false},
+									{answer:"FICO TOTALMENTE FOCADO ENQUANTO REALIZO MINHAS ATIVIDADES", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "COM QUE FREQUENCIA VOCÊ DEFINI METAS PARA SUA VIDA PESSOAL E PROFISSIONAL?",
+								answers: [
+									{answer:"NUNCA", order:1,selected:false},
+									{answer:"RARAMENTE", order:2,selected:false},
+									{answer:"EVENTUALMENTE", order:3,selected:false},
+									{answer:"A MAIOR PARTE DAS VEZES", order:4,selected:false},
+									{answer:"FREQUENTEMENTE", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					}, 
+					{
+						name:"PRESENÇA",
+						order:3,
+						o_que_evitar:[
+							{option:"LEVAR AS TAREFAS DO TRABALHO PARA CASA",selected:false},
+							{option:"FICAR COM A CABEÇA EM CASA QUANDO ESTÁ REALIZANDO UMA TAREFA DO TRABALHO",selected:false},
+							{option:"CONCENTRAR NOS RUÍDOS OU EM FOFOCAS",selected:false},
+							{option:"ENTRAR NO MODO AUTOMÁTICO",selected:false},
+							{option:"APENAS OUVIR E NÃO ESCUTAR",selected:false},
+							{option:"DESISTIR DE REPETIR UMA TAREFA ATÉ INCORPORÁ-LA",selected:false},
+							{option:"EVITAR SER AFOBADO",selected:false},
+							{option:"DESFOCAR A ATENÇÃO PARA FAZER OUTRA ATIVIDADE",selected:false}, 
+							{option:"SER MENOS AUTOCRÍTICO",selected:false},   
+						],
+						o_que_fazer:[
+							{option:"VIVENCIAR, DE FATO, CADA ETAPA DO MEU DIA",selected:false}, 
+							{option:"ESTAR PRESENTE PARA OS MEUS AMIGOS E FAMÍLIA",selected:false},
+							{option:"OBSERVAR A NATUREZA AO MEU REDOR",selected:false},
+							{option:"VER OS PÁSSAROS",selected:false},
+							{option:"REPETIR VÁRIAS VEZES A QUALIDADE / AÇÃO EM QUE PRETENDO FICAR BOM(A) – HÁBITO",selected:false},
+							{option:"COLOCAR CONSCIÊNCIA NA ATIVIDADE",selected:false},
+							{option:"PRATICAR UMA ARTE (PINTURA, MÚSICA, MARCIAL, ETC)",selected:false},
+							{option:"MANTER O FOCO NAS SUAS ATIVIDADES",selected:false},
+							{option:"OBSERVAR AS PESSOAS QUE ESTÃO A MINHA VOLTA",selected:false}, 
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ DÁ PARA O QUANTO VOCÊ APROVEITA O SEU TEMPO?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUE NOTA VOCÊ DÁ PARA EVOLUÇÃO DO APROVEITAMENTO DO SEU TEMPO?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "VOCÊ CULTIVA O AUMENTO DA SUA DISCIPLINA?",
+								answers: [
+									{answer:"NÃO TENHO DISCIPLINA E SINTO DIFICULDADE EM ME ESFORÇAR CADA VEZ MAIS", order:1,selected:false},
+									{answer:"TENTO, MAS NÃO TENHO MUITO SUCESSO NA EVOLUÇÃO DA DISCIPLINA", order:2,selected:false},
+									{answer:"ESTOU TENTANDO E CONSEGUINDO ME TORNAR MAIS DISCIPLINADO", order:3,selected:false},
+									{answer:"PERCEBO QUE SOU MAIS DISCIPLINADO DO QUE ERA ANTES", order:4,selected:false},
+									{answer:"SIM, SEMPRE TENTO ME SUPERAR", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "VOCÊ TEM FORÇA DE VONTADE?",
+								answers: [
+									{answer:"NÃO", order:1,selected:false},
+									{answer:"RARAMENTE", order:2,selected:false},
+									{answer:"ÀS VEZES", order:3,selected:false},
+									{answer:"QUASE SEMPRE", order:4,selected:false},
+									{answer:"SIM", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					},
+					{
+						name:"RELATIVIDADE",
+						order:4,
+						o_que_evitar:[
+							{option:"FICAR OLHANDO NO RELÓGIO",selected:false},
+							{option:"ME ABORRECER POR ATRASOS (EX: MARCAR DUAS COISAS MUITO PRÓXIMAS E FICAR IRRITADO DEPOIS)",selected:false},
+							{option:"DAR DESCULPAS POR ATRASOS",selected:false},
+							{option:"DEIXAR OS OUTROS ESPERANDO E DESPERDIÇAR O TEMPO DELES",selected:false},
+							{option:"USAR O TEMPO NO PROBLEMA E NÃO NA SOLUÇÃO",selected:false},
+							{option:"USAR O TEMPO COM COISAS QUE NÃO DÃO RETORNO",selected:false},
+							{option:"DEDICAR MUITO DO MEU TEMPO COISAS ALIENANTES: FUTEBOL, NOVELA, FACEBOOK, FOFOCA",selected:false},
+							{option:"FICAR PRESO NO PASSADO OU NO FUTURO",selected:false},
+							{option:"ME DESFOCAR A QUEM ESTÁ DANDO ATENÇÃO",selected:false},
+						],
+						o_que_fazer:[
+							{option:"TER CONSCIÊNCIA DA PASSAGEM DO TEMPO: VIVER NO PRESENTE",selected:false},
+							{option:"RECONHECER OS MOMENTOS DE ALEGRIA",selected:false},
+							{option:"SE PERGUNTAR: POR QUE A PRESSA? PRECISO TER PRESSA?",selected:false},
+							{option:"SENTIR E RECONHECER O CLIMA E AS ESTAÇÕES",selected:false},
+							{option:"APROVEITAR O TEMPO LIVRE",selected:false},
+							{option:"UTILIZAR O TEMPO PARA APRENDER",selected:false},
+							{option:"PENSAR NO QUE VAI TER E PENSAR MAIS NO QUE NÃO IRÁ EXISTIR",selected:false},
+							{option:"SER FELIZ",selected:false}, 
+							{option:"VALORIZAR A MINHA PRESENÇA NAS RELAÇÕES",selected:false}, 
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ DÁ PARA SE FOCAR NO AGORA (ATENÇÃO AO QUE ESTÁ VIVENDO)?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUE NOTA VOCÊ DÁ PARA EVOLUÇÃO NO SEU PODER DE FOCAR NO AGORA (ATENÇÃO AO QUE ESTÁ VIVENDO)?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "COM QUE FREQUENCIA VOCÊ ACORDA BEM DISPOSTO?",
+								answers: [
+									{answer:"QUASE NUNCA", order:1,selected:false},
+									{answer:"ÀS VEZES", order:2,selected:false},
+									{answer:"NA METADE DAS VEZES", order:3,selected:false}, 
+									{answer:"COM UMA FREQUÊNCIA RAZOÁVEL", order:4,selected:false},
+									{answer:"QUASE TODOS OS DIAS", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "VOCÊ ORGANIZA SUAS ATIVIDADES DO MAIS IMPORTANTE PARA O MENOS IMPORTANTE?",
+								answers: [
+									{answer:"NÃO ORGANIZO MINHAS ATIVIDADES POR PRIORIDADE", order:1,selected:false},
+									{answer:"DE VEZ EM QUANDO FAÇO A ORGANIZAÇÃO DAS ATIVIDADE POR PRIORIDADE", order:2,selected:false}, 
+									{answer:"EVENTUALMENTE FAÇO A ORGANIZAÇÃO DAS ATIVIDADE POR PRIORIDADE", order:3,selected:false},
+									{answer:"QUASE SEMPRE ORGANIZO MINHAS ATIVIDADE POR PRIORIDADE", order:4,selected:false}, 
+									{answer:"SEMPRE ORGANIZO MINHAS ATIVIDADES POR PRIORIDADES", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					},
+				]
+			},
+			{
+				order:5,
+				name:"emoção",
+				color:"4eb5a4",
+				logo:"logo_emocao.png",
+				subresources:[
+					{
+						name:"ORGANIZAÇÃO DAS EMOÇÕES",
+						order:1,
+						o_que_evitar:[
+							{option:"NÃO REPRIMIR EMOÇÕES E SENTIMENTOS",selected:false},
+							{option:"NÃO DEIXAR DE FALAR ALGUMA COISA QUANDO SE SENTIR ANGUSTIADO",selected:false},
+							{option:"NÃO ACREDITAR QUE PODE CONTROLAR AS EMOÇÕES E SENTIMENTOS ALHEIOS",selected:false},
+							{option:"REAGIR DE FORMA DESCONTROLADA COM AS PESSOAS",selected:false},
+							{option:"FUGIR DAS SITUAÇÕES QUE NOS CAUSAM SENSAÇÕES E EMOÇÕES DESAGRADÁVEIS",selected:false},
+							{option:"FOCAR NOSSOS PENSAMENTOS EM UMA EMOÇÃO DESAGRADÁVEL",selected:false},
+							{option:"PERDER TEMPO E ENERGIA COM COISAS QUE VOCÊ NÃO PODE CONTROLAR",selected:false},
+							{option:"PERDER A PACIÊNCIA COM ALGUÉM NOS DIVERSOS AMBIENTES",selected:false},
+							{option:"NÃO SABER ADMINISTRAR MEUS SENTIMENTOS EM PÚBLICO",selected:false},  
+						],
+						o_que_fazer:[
+							{option:"AUMENTAR O MEU PLACAR INTERNO (VALOR QUE VOCÊ ATRIBUI A VOCÊ MESMO)",selected:false},
+							{option:"IDENTIFICAR E FAZER UMA LISTA PARA AS SITUAÇÕES QUE ME DEIXAM COM RAIVA,TRISTE, TENSO, FELIZ...",selected:false},
+							{option:"IDENTIFICAR QUAIS SÃO OS PENSAMENTOS QUE CRIAM, MANTÉM OU AUMENTAM AS EMOÇÕES DESAGRADÁVEIS",selected:false},
+							{option:"PERCEBER QUANDO ESTOU FICANDO NERVOSO OU CHATEADO, PRESTAR ATENÇÃO AOS PENSAMENTOS QUE ESTOU TENDO E {option:"IDENTIFICANDO MINHAS CONOTAÇÕES NEGATIVAS",selected:false},
+							{option:"PERCEBER QUAIS SÃO OS MEUS PADRÕES DE PENSAMENTO DESAGRADÁVEIS E RECORRENTES",selected:false},
+							{option:"APRENDER A IDENTIFICAR MOMENTO INADEQUADOS PARA CONVERSAS SÉRIAS",selected:false},
+							{option:"RESPIRAR PROFUNDAMENTE ANTES DE TOMAR UMA ATITUDE EM ESTADO EMOCIONAL ALTERADO",selected:false},
+							{option:"COLOCAR O FOCO NAS OPORTUNIDADES E NAS POSSÍVEIS SOLUÇÕES DO QUE NAS SITUAÇÕES DESAGRADÁVEIS",selected:false},
+							{option:"PRATICAR A TÉCNICA DE ENSAIO MENTAL DE IDEALIZAÇÃO (MENTALIZAÇÃO)",selected:false},
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ DÁ PARA O SEU DOMÍNIO EMOCIONAL?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUE NOTA VOCÊ DÁ PARA A EVOLUÇÃO NO SEU DOMÍNIO EMOCIONAL?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "VOCÊ CONSIDERA QUE DÁ IMPORTÂNCIA DEVIDA ÀS EMOÇÕES?",
+								answers: [
+									{answer:"NÃO DOU IMPORTÂNCIA NENHUMA", order:1,selected:false},
+									{answer:"DOU POUCO IMPORTÂNCIA", order:2,selected:false},
+									{answer:"DOU IMPORTÂNCIA, MAS NÃO TANTO QUANTO DEVERIA", order:3,selected:false},
+									{answer:"DOU IMPORTÂNCIA, MAS AINDA POSSO MELHORAR", order:4,selected:false},
+									{answer:"SIM, DOU A DEVIDA IMPORTÂNCIA", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "VOCÊ COMPREENDE E DOMINA SUA EMOÇÕES? ",
+								answers: [
+									{answer:"NÃO COMPREENDO MINHAS EMOÇÕES", order:1,selected:false},
+									{answer:"COMPREENDO, MAS NÃO TENHO DOMINIO DELAS", order:2,selected:false},
+									{answer:"COMPREENDO E DOMINO AS VEZES", order:3,selected:false},
+									{answer:"NORMALMENTE CONSIGO LIDAR E COMPREENDER COM MINHAS EMOÇÕES", order:4,selected:false},
+									{answer:"SIM, TENHO DOMINIO E COMPREENSÃO DE MINHAS EMOÇÕES", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					}, 
+					{
+						name:"DESCOBERTA",
+						order:2,
+						o_que_evitar:[
+							{option:"ME ISOLAR E AGIR SOZINHO (A) DENTRO DE PROJETOS COLETIVOS E/OU ATIVIDADES DOMÉSTICAS",selected:false},
+							{option:"ME COLOCAR EM SITUAÇÃO E SENTIMENTO DE INSATISFAÇÃO",selected:false},
+							{option:"DIZER E ACREDITAR QUE NÃO SOU CAPAZ",selected:false},
+							{option:"FICAR DE CARA FECHADA E AMARRADA AOS ACONTECIMENTOS AO MEU REDOR",selected:false},
+							{option:"FAZER AS COISAS SEM REFLETIR E IDENTIFICAR O PROPÓSITO NO ATO – ENTRAR NO MODO AUTOMÁTICO",selected:false},
+							{option:"FAZER AS COISAS VISANDO APENAS AGRADAR OS DEMAIS (PAI, MÃE, CHEFE, NAMORADO (A), MARIDO, ESPOSA)",selected:false},
+							{option:"COMEÇAR EM PROJETO, RELACIONAMENTO, TAREFA SEM ANTES TER CLARO QUAL O OBJETIVO QUE QUER CONQUISTAR
+							{option:"SER UMA PESSOA EGOÍSTA",selected:false}, 
+							{option:"TER SENTIMENTOS DE "EU MEREÇO" (PADRÃO VÍTIMA)",selected:false},
+						],
+						o_que_fazer:[
+							{option:"OBSERVAR SE HÁ PESSOAS QUE DEPENDEM DA MINHA ATUAÇÃO E COMO POSSO AJUDA-LAS",selected:false},
+							{option:"DESTACAR CADA MOMENTO DE FELICIDADE QUE TIVER E VALORIZÁ-LO",selected:false},
+							{option:"PRATICAR A GRATIDÃO – AGRADECER A TODO E QUALQUER ACONTECIMENTO NA SUA TOTALIDADE",selected:false}, 
+							{option:"ENTENDER QUE AS SITUAÇÕES DIFÍCEIS PODEM SER UMA FORMA DE APRENDIZADO",selected:false},
+							{option:"LEMBRAR DIARIAMENTE QUAL MEU PROPÓSITO E NO FINAL DO DIA REFLETIR O QUE FIZ E QUAL FOI MEU PROGRESSO",selected:false},
+							{option:"RECONHECER COISAS PRAZEROSAS NO MEU TRABALHO E/OU NA MINHA CASA",selected:false},
+							{option:"SABER RECONHECER, PEDIR ORIENTAÇÃO E AJUDA QUANDO NECESSÁRIO",selected:false},
+							{option:"COMPARTILHAR SENTIMENTOS COM PESSOAS DE MINHA CONFIANÇA",selected:false}, 
+							{option:"IDENTIFICAR MEUS PONTOS FORTES E FRACOS",selected:false},
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ DÁ PARA O SEU ESTADO DE GRATIDÃO E PROPÓSITO?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUE NOTA VOCÊ DÁ À SUA EVOLUÇÃO NO SEU ESTADO DE GRATIDÃO E PROPÓSITO?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "VOCÊ AMA O SEU TRABALHO?",
+								answers: [
+									{answer:"NÃO AMO", order:1,selected:false},
+									{answer:"AMO POUCO", order:2,selected:false},
+									{answer:"APRENDI A GOSTAR", order:3,selected:false},
+									{answer:"A MAIOR PARTE DO TEMPO", order:4,selected:false},
+									{answer:"NÃO QUERO FAZER OUTRA COISA", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "VOCÊ SE SENTE GRATO PELA SUA VIDA?",
+								answers: [
+									{answer:"NUNCA", order:1,selected:false},
+									{answer:"RARAMENTE", order:2,selected:false},
+									{answer:"DE VEZ EM QUANDO", order:3,selected:false},
+									{answer:"FREQUENTEMENTE", order:4,selected:false},
+									{answer:"SEMPRE", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					}, 
+					{
+						name:"RELACIONAMENTO",
+						order:3,
+						o_que_evitar:[
+							{option:"EVITAR SE CONCENTRAR NOS RUÍDOS OU EM FOFOCAS",selected:false},
+							{option:"GUARDAR MÁGOAS OU RESSENTIMENTOS",selected:false},
+							{option:"IDEALIZAR E COLOCAR EXCESSIVAS EXPECTATIVAS NO OUTRO",selected:false},
+							{option:"FRIEZA DE SENTIMENTO, FALTA DE AFETO E DEMONSTRAÇÃO DE CARINHO",selected:false},
+							{option:"FOCAR APENAS NOS PONTOS NEGATIVOS DOS OUTROS",selected:false},
+							{option:"NÃO CAIR NA ROTINA E NO COMODISMO",selected:false},
+							{option:"EVITAR LEVAR PARA O LADO PESSOAL AS CRÍTICAS NO TRABALHO OU EM CASA",selected:false},
+							{option:"EVITAR FUGIR DOS PROBLEMAS E DAS PESSOAS EM QUE TENHO MAIS COISAS MAL RESOLVIDAS",selected:false},
+							{option:"EVITAR AGIR DE FORMA AUTOMÁTICA E REATIVA DE FORMA VERBAL OU NÃO VERBAL",selected:false},  
+						],
+						o_que_fazer:[
+							{option:"CONTROLAR O SEU CIÚME E O EXCESSO DE DESCONFIANÇA",selected:false},
+							{option:"IDENTIFICAR PONTOS DE RECONHECIMENTO (QUALIDADE) DO OUTRO",selected:false},
+							{option:"SER AMIGÁVEL COM OS COLEGAS DE TRABALHO",selected:false},
+							{option:"APRENDER A OUVIR MAIS E FALAR MENOS",selected:false},
+							{option:"ADAPTAR-SE AO ESTILO DE DIÁLOGO DA FAMÍLIA OU DO TRABALHO",selected:false},
+							{option:"TORNAR-ME UMA PESSOA INTERESSANTE (RICA DE RECURSOS)",selected:false},
+							{option:"PROCURE FAZER ELOGIOS SINCEROS AS PESSOAS",selected:false},
+							{option:"SER LEAL NAS RELAÇÕES",selected:false},
+							{option:"APRENDER A CONFIAR NAS PESSOAS E SITUAÇÕES",selected:false}, 
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ DÁ PARA A SUA CAPACIDADE DE SE RELACIONAR?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUE NOTA VOCÊ DÁ PARA A SUA EVOLUÇÃO NA CAPACIDADE DE SE RELACIONAR?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "QUANDO VOCÊ CONVERSA COM ALGUMA PESSOA QUANTO DE ATENÇÃO DÁ A ELA?",
+								answers: [
+									{answer:"NÃO DOU ATENÇÃO NENHUMA", order:1,selected:false},
+									{answer:"DOU POUCO ATENÇÃO", order:2,selected:false},
+									{answer:"DOU ATENÇÃO, MAS, NÃO TANTO QUANTO DEVERIA", order:3,selected:false},
+									{answer:"DOU ATENÇÃO, MAS, AINDA POSSO MELHORAR", order:4,selected:false},
+									{answer:"SIM, DOU A DEVIDA ATENÇÃO E RECONHECIMENTO", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "VOCÊ TEM FACILIDADE EM FAZER AMIGOS?",
+								answers: [
+									{answer:"QUASE NÃO TENHO AMIGOS", order:1,selected:false},
+									{answer:"TENHO DIFICULDADE EM FAZER AMIGOS", order:2,selected:false},
+									{answer:"FAÇO NOVOS AMIGOS QUANDO ALGUEM ME APRESENTA", order:3,selected:false},
+									{answer:"TENHO FACILIDADE EM FAZER AMIGOS", order:4,selected:false},
+									{answer:"TENHO MUITA FACILIDADE EM FAZER AMIGOS", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					},
+					{
+						name:"EGOÍSMO/ALTRUÍSMO",
+						order:4,
+						o_que_evitar:[
+							{option:"RESPONDER ANTES DO OUTRO CONCLUIR UMA IDEIA",selected:false},
+							{option:"TENTAR SE LIVRAR DOS RISCOS CULPANDO OS OUTROS",selected:false},
+							{option:"TRAIR, ROUBAR OU ENGANAR ALGUÉM – SER ANTIÉTICO",selected:false},
+							{option:"DESCONTAR OS MEUS PROBLEMAS EM OUTRAS PESSOAS",selected:false},
+							{option:"ESQUECER-ME DE MIM AO PENSAR NO PRÓXIMO",selected:false},
+							{option:"EVITAR PASSAR POR CIMA DOS MEUS SENTIMENTOS PARA AGRADAR OS OUTROS",selected:false},
+							{option:"ACREDITAR QUE A MINHA OPINIÃO É A ÚNICA CORRETA E VÁLIDA",selected:false},
+							{option:"EVITAR SER HIPÓCRITA ENTRE O QUE FALO E O QUE FAÇO",selected:false},
+							{option:"SER UMA PESSOA ORGULHOSA",selected:false}, 
+						],
+						o_que_fazer:[
+							{option:"AUMENTAR A RIQUEZA PESSOAL PARA SER CAPAZ DE PRATICAR A DOAÇÃO DE RECURSOS",selected:false},
+							{option:"TROCAR OS MEUS RECURSOS COM OUTRAS PESSOAS (DINHEIRO, SAÚDE, CONHECIMENTO, TEMPO E EMOÇÃO)",selected:false},
+							{option:"DEFINIR ALGUÉM/ALGUMA ATIVIDADE QUE ME FAÇA FELIZ E REPETI-LA POR UM TEMPO DETERMINADO",selected:false},
+							{option:"MENTALIZAR O DESEJO DE QUE TODOS OS SERES SEJAM FELIZES",selected:false},
+							{option:"CEDER O LUGAR NO ÔNIBUS PARA UM IDOSO OU PESSOA CHEIO DE PACOTES",selected:false}, 
+							{option:"DAR PREFERÊNCIA PARA OUTRO MOTORISTA",selected:false},
+							{option:"CONSEGUIR ME COLOCAR NO LUGAR DAS PESSOAS COM IMPARCIALIDADE",selected:false},
+							{option:"PENSAR E OBSERVAR ALGUÉM QUE VOCÊ DESCREVERIA COMO 'ALTRUÍSTA'",selected:false}, 
+							{option:"TER PACIÊNCIA EM LUGARES CHEIOS DE PESSOAS",selected:false},  
+						],
+						questionaire:[
+							{
+								order: 1,
+								question: "QUE NOTA VOCÊ DÁ AO SEU NÍVEL DE ALTRUÍSMO?",
+								score: 0
+							},
+							{
+								order: 2,
+								question: "QUE NOTA VOCÊ DÁ EVOLUÇÃO DO SEU NÍVEL DE ALTRUÍSMO?",
+								score: 0
+							}
+						],
+						free_questionaire:[
+							{
+								order:1,
+								question: "VOCÊ COSTUMA AJUDAR OUTRAS PESSOAS?",
+								answers: [
+									{answer:"NUNCA", order:1,selected:false},
+									{answer:"RARAMENTE", order:2,selected:false},
+									{answer:"DE VEZ EM QUANDO", order:3,selected:false},
+									{answer:"FREQUENTEMENTE", order:4,selected:false},
+									{answer:"SEMPRE", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							},
+							{
+								order:2,
+								question: "COM QUE FREQUÊNCIA VOCÊ COSTUMA SE COLOCAR NO LUGAR DAS OUTRAS PESSOAS?",
+								answers: [
+									{answer:"NUNCA", order:1,selected:false},
+									{answer:"RARAMENTE", order:2,selected:false},
+									{answer:"DE VEZ EM QUANDO", order:3,selected:false},
+									{answer:"FREQUENTEMENTE", order:4,selected:false},
+									{answer:"SEMPRE", order:5,selected:false},
+									{answer:"#N/A", order:6,selected:false},
+								]
+
+							}
+						]
+					},
+				]
+			}
+		]
+}
